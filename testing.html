@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commands</title>
+    <!-- Include Axios via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            max-width: 1200px;
+            width: 90%;
+            padding: 20px;
+        }
+
+        .command-card {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.25s;
+        }
+
+        .command-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .command-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #e0e0e0;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .command-description {
+            margin-bottom: 8px;
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        .command-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .command-syntax,
+        .command-example {
+            font-size: 0.85em;
+            color: #bbb;
+            margin-bottom: 4px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            background-color: #333;
+            border-radius: 4px;
+            cursor: pointer;
+            color: #e0e0e0;
+        }
+
+        .tab.active {
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Command List</h1>
+    <div id="tabs" class="tabs"></div>
+    <div class="container" id="content"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tabs = document.getElementById("tabs");
+            const content = document.getElementById("content");
+
+            // Use Axios to fetch the commands JSON
+            axios.get('https://okaybot.xyz/commands.json')
+                .then(response => {
+                    const data = response.data;
+
+                    // Create tabs for each module
+                    Object.keys(data).forEach((module, index) => {
+                        const tab = document.createElement("div");
+                        tab.classList.add("tab");
+                        tab.textContent = module.charAt(0).toUpperCase() + module.slice(1);
+                        tab.addEventListener("click", () => showCommands(module));
+
+                        // Set the first tab as active by default
+                        if (index === 0) {
+                            tab.classList.add("active");
+                            showCommands(module);
+                        }
+
+                        tabs.appendChild(tab);
+                    });
+
+                    function showCommands(module) {
+                        // Set active tab
+                        Array.from(tabs.children).forEach(tab => tab.classList.remove("active"));
+                        const selectedTab = Array.from(tabs.children).find(tab => tab.textContent.toLowerCase() === module);
+                        if (selectedTab) selectedTab.classList.add("active");
+
+                        // Clear previous content
+                        content.innerHTML = "";
+
+                        // Display each command in the selected module
+                        data[module].forEach(command => {
+                            const commandDiv = document.createElement("div");
+                            commandDiv.classList.add("command-card");
+
+                            commandDiv.innerHTML = `
+                                <div class="command-title">${command.name} (${command.aliases.join(", ")})</div>
+                                <div class="command-description">Description: ${command.description}</div>
+                                <div class="command-syntax">Syntax: ${command.syntax}</div>
+                                <div class="command-example">Example: ${command.example}</div>
+                            `;
+
+                            content.appendChild(commandDiv);
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error("Error fetching commands:", error);
+                    content.innerHTML = "Failed to load commands. Please try again later.";
+                });
+        });
+    </script>
+</body>
+</html>
