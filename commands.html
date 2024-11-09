@@ -1,0 +1,3460 @@
+{
+    "modules": {
+        "automod": [
+            {
+                "name": "antinuke",
+                "aliases": [
+                    "an"
+                ],
+                "description": "Manage the antinuke settings for the guild",
+                "syntax": "antinuke <subcommand> <args>",
+                "example": "antinuke enable",
+                "permissions": "ADMINISTRATOR",
+                "module": "automod"
+            },
+            {
+                "name": "antinuke enable",
+                "description": "Enable the antinuke system",
+                "syntax": "antinuke enable",
+                "example": "antinuke enable",
+                "permissions": "ADMINISTRATOR",
+                "module": "automod"
+            },
+            {
+                "name": "antinuke disable",
+                "description": "Disable the antinuke system",
+                "syntax": "antinuke disable",
+                "example": "antinuke disable",
+                "permissions": "ADMINISTRATOR",
+                "module": "automod"
+            },
+            {
+                "name": "antinuke whitelist",
+                "description": "Whitelist a user from the antinuke system",
+                "syntax": "antinuke whitelist <user>",
+                "example": "antinuke whitelist @c2rter",
+                "permissions": "ADMINISTRATOR",
+                "module": "automod"
+            },
+            {
+                "name": "antinuke unwhitelist",
+                "description": "Unwhitelist a user from the antinuke system",
+                "syntax": "antinuke unwhitelist <user>",
+                "example": "antinuke unwhitelist @c2rter",
+                "permissions": "ADMINISTRATOR",
+                "module": "automod"
+            },
+            {
+                "name": "antinuke config",
+                "description": "View the current antinuke configuration",
+                "syntax": "antinuke config",
+                "example": "antinuke config",
+                "permissions": "ADMINISTRATOR",
+                "module": "automod"
+            },
+            {
+                "name": "antinuke reset",
+                "description": "Reset the antinuke settings",
+                "syntax": "antinuke reset",
+                "example": "antinuke reset",
+                "permissions": "ADMINISTRATOR",
+                "module": "automod"
+            },
+            {
+                "name": "antinuke admin",
+                "description": "Add or remove an antinuke admin",
+                "syntax": "antinuke admin <add|remove> (user)",
+                "example": "antinuke admin add @c2rter",
+                "permissions": "ADMINISTRATOR",
+                "module": "automod"
+            },
+            {
+                "name": "antinuke whitelisted",
+                "description": "View whitelisted users",
+                "syntax": "antinuke whitelisted",
+                "example": "antinuke whitelisted",
+                "permissions": "ADMINISTRATOR",
+                "module": "automod"
+            }
+        ],
+        "configuration": [
+            {
+                "name": "autorole",
+                "aliases": [
+                    "none"
+                ],
+                "description": "Manage the autorole settings for the guild",
+                "syntax": "autorole <subcommand> <args>",
+                "example": "autorole add @role",
+                "permissions": "MANAGE_GUILD",
+                "module": "configuration"
+            },
+            {
+                "name": "autorole add",
+                "description": "Set the autorole for the guild",
+                "syntax": "autorole add <role>",
+                "example": "autorole add @role",
+                "permissions": "MANAGE_GUILD",
+                "module": "configuration"
+            },
+            {
+                "name": "autorole remove",
+                "description": "Remove the autorole for the guild",
+                "syntax": "autorole remove <role>",
+                "example": "autorole remove @role",
+                "permissions": "MANAGE_GUILD",
+                "module": "configuration"
+            },
+            {
+                "name": "autorole view",
+                "description": "View the autorole for the guild",
+                "syntax": "autorole view",
+                "example": "autorole view",
+                "permissions": "MANAGE_GUILD",
+                "module": "configuration"
+            },
+            {
+                "name": "embeds",
+                "aliases": [
+                    "none"
+                ],
+                "description": "Manage most embed settings for the server",
+                "syntax": "embeds <subcommand>",
+                "example": "embeds enable",
+                "permissions": "MANAGE_GUILD",
+                "module": "configuration"
+            },
+            {
+                "name": "embeds enable",
+                "description": "Enable embeds for the server",
+                "syntax": "embeds enable",
+                "example": "embeds enable",
+                "permissions": "MANAGE_GUILD",
+                "module": "configuration"
+            },
+            {
+                "name": "embeds disable",
+                "description": "Disable embeds for the server",
+                "syntax": "embeds disable",
+                "example": "embeds disable",
+                "permissions": "MANAGE_GUILD",
+                "module": "configuration"
+            },
+            {
+                "name": "fakepermissions",
+                "aliases": [
+                    "fp"
+                ],
+                "description": "Manage trusted roles for fake permissions",
+                "syntax": "fakepermissions <subcommand> (args)",
+                "example": "fakepermissions add @admin",
+                "permissions": "MANAGE_GUILD",
+                "module": "configuration"
+            },
+            {
+                "name": "fakepermissions add",
+                "description": "Add a role to the trusted roles list",
+                "syntax": "fakepermissions add <role>",
+                "example": "fakepermissions add @role",
+                "permissions": "MANAGE_GUILD",
+                "module": "configuration"
+            },
+            {
+                "name": "fakepermissions remove",
+                "description": "Remove a role from the trusted roles list",
+                "syntax": "fakepermissions remove <role>",
+                "example": "fakepermissions remove @role",
+                "permissions": "MANAGE_GUILD",
+                "module": "configuration"
+            },
+            {
+                "name": "fakepermissions list",
+                "description": "List all trusted roles",
+                "syntax": "fakepermissions list",
+                "example": "fakepermissions list",
+                "permissions": "MANAGE_GUILD",
+                "module": "configuration"
+            },
+            {
+                "name": "fakepermissions clear",
+                "description": "Clear all trusted roles",
+                "syntax": "fakepermissions clear",
+                "example": "fakepermissions clear",
+                "permissions": "MANAGE_GUILD",
+                "module": "configuration"
+            },
+            {
+                "name": "notifications",
+                "aliases": [
+                    "logs"
+                ],
+                "description": "Manage the notification settings for the guild",
+                "syntax": "notifications <subcommand> <args>",
+                "example": "notifications add mod-logs",
+                "permissions": "MANAGE_GUILD",
+                "module": "configuration"
+            },
+            {
+                "name": "notifications add",
+                "description": "Set the notifications channel",
+                "syntax": "notifications add #channel",
+                "example": "notifications add mod-logs",
+                "permissions": "MANAGE_GUILD",
+                "module": "configuration"
+            },
+            {
+                "name": "notifications reset",
+                "description": "Reset the notifications settings",
+                "syntax": "notifications reset",
+                "example": "notifications reset",
+                "permissions": "MANAGE_GUILD",
+                "module": "configuration"
+            },
+            {
+                "name": "notifications view",
+                "description": "View the notifications channel",
+                "syntax": "notifications view",
+                "example": "notifications view",
+                "permissions": "MANAGE_GUILD",
+                "module": "configuration"
+            },
+            {
+                "name": "prefix",
+                "aliases": [
+                    "setprefix"
+                ],
+                "description": "Manage the bot's prefix within your server",
+                "syntax": "prefix <subcommand> (args)",
+                "example": "prefix set !",
+                "permissions": "MANAGE_GUILD",
+                "module": "configuration"
+            },
+            {
+                "name": "prefix set",
+                "description": "Set a new prefix for the bot",
+                "syntax": "prefix set <new prefix>",
+                "example": "prefix set !",
+                "permissions": "MANAGE_GUILD",
+                "module": "configuration"
+            },
+            {
+                "name": "prefix reset",
+                "description": "Reset the prefix to the default",
+                "syntax": "prefix reset",
+                "example": "prefix reset",
+                "permissions": "MANAGE_GUILD",
+                "module": "configuration"
+            },
+            {
+                "name": "removejail",
+                "aliases": [
+                    "removej"
+                ],
+                "description": "Removes the jail role and channel",
+                "syntax": "removejail",
+                "example": "removejail",
+                "module": "configuration",
+                "permissions": "MANAGE_GUILD"
+            },
+            {
+                "name": "setupjail",
+                "aliases": [
+                    "setupj"
+                ],
+                "description": "Sets up the jail role and channel",
+                "syntax": "setupjail",
+                "example": "setupjail",
+                "module": "configuration",
+                "permissions": "MANAGE_GUILD"
+            }
+        ],
+        "developer": [
+            {
+                "name": "json",
+                "description": "Returns all of the commands in a JSON file split by module and all",
+                "syntax": "json",
+                "example": "json",
+                "permissions": "BOT_OWNER",
+                "module": "developer"
+            },
+            {
+                "name": "eval",
+                "aliases": [
+                    "js"
+                ],
+                "description": "Evaluate JavaScript code.",
+                "syntax": "eval <code>",
+                "example": "eval message.guild",
+                "permissions": "Bot Developer",
+                "module": "developer"
+            },
+            {
+                "name": "reload",
+                "description": "Reloads all commands.",
+                "aliases": [
+                    "rl"
+                ],
+                "syntax": "reload",
+                "example": "reload",
+                "permissions": "N/A",
+                "module": "developer"
+            },
+            {
+                "name": "setavatar",
+                "aliases": [
+                    "setav"
+                ],
+                "description": "Set the bot's avatar",
+                "syntax": "setavatar <url>",
+                "example": "setavatar https://wock.club/wock.png",
+                "permissions": "BOT_OWNER",
+                "module": "developer"
+            }
+        ],
+        "economy": [
+            {
+                "name": "balance",
+                "aliases": [
+                    "bal"
+                ],
+                "description": "Check your balance and bank account",
+                "syntax": "balance",
+                "example": "balance",
+                "module": "economy"
+            },
+            {
+                "name": "beg",
+                "description": "Beg for coins",
+                "syntax": "beg",
+                "example": "beg",
+                "module": "economy"
+            },
+            {
+                "name": "coinflip",
+                "aliases": [
+                    "flip"
+                ],
+                "description": "Flip a coin and get a random result",
+                "syntax": "coinflip <amount> (option)",
+                "example": "coinflip 100 heads",
+                "module": "economy"
+            },
+            {
+                "name": "coinflip all",
+                "description": "Flip a coin with all your coins",
+                "syntax": "coinflip all (option)",
+                "example": "coinflip all heads",
+                "module": "economy"
+            },
+            {
+                "name": "coinflip half",
+                "description": "Flip a coin with half of your coins",
+                "syntax": "coinflip half (option)",
+                "example": "coinflip half heads",
+                "module": "economy"
+            },
+            {
+                "name": "daily",
+                "aliases": [
+                    "dailies"
+                ],
+                "description": "Claim your daily coins",
+                "syntax": "daily",
+                "example": "daily",
+                "module": "economy"
+            },
+            {
+                "name": "deposit",
+                "aliases": [
+                    "dep"
+                ],
+                "description": "Deposit money from your balance to your bank account",
+                "syntax": "deposit <amount>",
+                "example": "deposit 100",
+                "module": "economy"
+            },
+            {
+                "name": "deposit all",
+                "description": "Deposit all your coins",
+                "syntax": "deposit all",
+                "example": "deposit all",
+                "module": "economy"
+            },
+            {
+                "name": "deposit half",
+                "description": "Deposit half of your coins",
+                "syntax": "deposit half",
+                "example": "deposit half",
+                "module": "economy"
+            },
+            {
+                "name": "give",
+                "aliases": [
+                    "transfer"
+                ],
+                "description": "Give money to another user",
+                "syntax": "give <member> (amount)",
+                "example": "give @c2rter 100",
+                "module": "economy"
+            },
+            {
+                "name": "hourly",
+                "description": "Claim your hourly coins",
+                "syntax": "hourly",
+                "example": "hourly",
+                "module": "economy"
+            },
+            {
+                "name": "rob",
+                "aliases": [
+                    "steal"
+                ],
+                "description": "Rob a random user and get a random amount of coins",
+                "syntax": "rob <user>",
+                "example": "rob @user",
+                "module": "economy"
+            },
+            {
+                "name": "roll",
+                "aliases": [
+                    "dice"
+                ],
+                "description": "Roll a dice and get a random number",
+                "syntax": "roll (amount)",
+                "example": "roll 100",
+                "module": "economy"
+            },
+            {
+                "name": "roll all",
+                "description": "Roll a dice with all your coins",
+                "syntax": "roll all",
+                "example": "roll all",
+                "module": "economy"
+            },
+            {
+                "name": "roll half",
+                "description": "Roll a dice with half of your coins",
+                "syntax": "roll half",
+                "example": "roll half",
+                "module": "economy"
+            },
+            {
+                "name": "sell",
+                "aliases": [
+                    "none"
+                ],
+                "description": "Sell your caught fish or hunted animals for money",
+                "syntax": "sell",
+                "example": "sell",
+                "module": "economy"
+            },
+            {
+                "name": "withdrawal",
+                "aliases": [
+                    "with"
+                ],
+                "description": "Withdraw money from your bank account to your balance",
+                "syntax": "withdrawal <amount>",
+                "example": "withdrawal 100",
+                "module": "economy"
+            },
+            {
+                "name": "withdrawal all",
+                "description": "Withdrawal all your coins",
+                "syntax": "withdrawal all",
+                "example": "deposit all",
+                "module": "economy"
+            },
+            {
+                "name": "withdrawal half",
+                "description": "Withdrawal half of your coins",
+                "syntax": "withdrawal half",
+                "example": "withdrawal half",
+                "module": "economy"
+            },
+            {
+                "name": "work",
+                "aliases": [
+                    "job"
+                ],
+                "description": "Work to earn coins",
+                "syntax": "work",
+                "example": "work",
+                "module": "economy"
+            },
+            {
+                "name": "hunt",
+                "aliases": [
+                    "none"
+                ],
+                "description": "Go hunting and catch some animals",
+                "module": "economy",
+                "syntax": "hunt",
+                "example": "hunt"
+            }
+        ],
+        "fun": [
+            {
+                "name": "backpack",
+                "aliases": [
+                    "bag"
+                ],
+                "description": "Shows everything in your backpack",
+                "syntax": "inventory",
+                "example": "inventory",
+                "module": "fun"
+            },
+            {
+                "name": "battle",
+                "aliases": [
+                    "fight"
+                ],
+                "description": "Battle your pokemon against another user's",
+                "syntax": "battle (member)",
+                "example": "battle @c2rter",
+                "module": "fun"
+            },
+            {
+                "name": "blackjack",
+                "aliases": [
+                    "bj"
+                ],
+                "description": "Play a game of blackjack to gamble your money.",
+                "syntax": "blackjack <amount>",
+                "example": "blackjack 100",
+                "module": "fun"
+            },
+            {
+                "name": "catch",
+                "aliases": [
+                    "capture"
+                ],
+                "description": "Catch a Pokémon",
+                "syntax": "catch",
+                "example": "catch",
+                "module": "fun"
+            },
+            {
+                "name": "cuddle",
+                "aliases": [
+                    "none"
+                ],
+                "description": "Cuddle with a member",
+                "syntax": "cuddle (member)",
+                "example": "cuddle @c2rter",
+                "module": "fun"
+            },
+            {
+                "name": "divorce",
+                "aliases": [
+                    "none"
+                ],
+                "description": "Divorce your partner",
+                "syntax": "divorce",
+                "example": "divorce",
+                "module": "fun"
+            },
+            {
+                "name": "feed",
+                "aliases": [
+                    "none"
+                ],
+                "description": "Feed a member",
+                "syntax": "feed (member)",
+                "example": "feed @c2rter",
+                "module": "fun"
+            },
+            {
+                "name": "fish",
+                "aliases": [
+                    "fishing"
+                ],
+                "description": "Go fishing and catch some fish!",
+                "syntax": "fish",
+                "example": "fish",
+                "module": "fun"
+            },
+            {
+                "name": "hug",
+                "aliases": [
+                    "none"
+                ],
+                "description": "Hug a member",
+                "syntax": "hug (member)",
+                "example": "hug @c2rter",
+                "module": "fun"
+            },
+            {
+                "name": "kiss",
+                "aliases": [
+                    "none"
+                ],
+                "description": "Kiss with a member",
+                "syntax": "kiss (member)",
+                "example": "kiss @c2rter",
+                "module": "fun"
+            },
+            {
+                "name": "marriage",
+                "aliases": [
+                    "none"
+                ],
+                "description": "View your or another member's marriage status",
+                "syntax": "marriage (member)",
+                "example": "marriage @c2rter",
+                "module": "fun"
+            },
+            {
+                "name": "marry",
+                "aliases": [
+                    "none"
+                ],
+                "description": "Marry someone",
+                "syntax": "marry (member)",
+                "example": "marry @c2rter",
+                "module": "fun"
+            },
+            {
+                "name": "pokedex",
+                "aliases": [
+                    "dex"
+                ],
+                "description": "Show your Pokémon collection",
+                "syntax": "pokedex",
+                "example": "pokedex",
+                "module": "fun"
+            },
+            {
+                "name": "rockpaperscissors",
+                "description": "Challenge another user to Rock Paper Scissors",
+                "syntax": "rockpaperscissors (member)",
+                "example": "rockpaperscissors @c2rter",
+                "aliases": [
+                    "rps"
+                ],
+                "module": "fun"
+            },
+            {
+                "name": "shopkeeper",
+                "aliases": [
+                    "shop"
+                ],
+                "description": "Visit the shop to purchase items",
+                "syntax": "shopkeeper",
+                "example": "shopkeeper",
+                "module": "fun"
+            },
+            {
+                "name": "slap",
+                "aliases": [
+                    "none"
+                ],
+                "description": "Slap a member",
+                "syntax": "slap (member)",
+                "example": "slap @c2rter",
+                "module": "fun"
+            },
+            {
+                "name": "snake",
+                "description": "Play a game of Snake",
+                "syntax": "snake",
+                "example": "snake",
+                "aliases": [
+                    "sg"
+                ],
+                "module": "fun"
+            },
+            {
+                "name": "tickle",
+                "aliases": [
+                    "none"
+                ],
+                "description": "Tickle a member",
+                "syntax": "tickle (member)",
+                "example": "tickle @c2rter",
+                "module": "fun"
+            },
+            {
+                "name": "tictactoe",
+                "aliases": [
+                    "ttt"
+                ],
+                "description": "Play a game of Tic Tac Toe with another member",
+                "syntax": "tictactoe (member)",
+                "example": "tictactoe @c2rter",
+                "module": "fun"
+            }
+        ],
+        "information": [
+            {
+                "name": "avatar",
+                "aliases": [
+                    "av"
+                ],
+                "description": "Get avatar of a member or yourself",
+                "syntax": "avatar <user>",
+                "example": "avatar @c2rter",
+                "module": "information"
+            },
+            {
+                "name": "banner",
+                "aliases": [
+                    "none"
+                ],
+                "description": "Get the banner of a member or yourself",
+                "syntax": "banner <member>",
+                "example": "banner @c2rter",
+                "module": "information"
+            },
+            {
+                "name": "botinfo",
+                "aliases": [
+                    "about",
+                    "bi"
+                ],
+                "description": "Shows information about the bo",
+                "syntax": "botinfo",
+                "example": "botinfo",
+                "module": "information"
+            },
+            {
+                "name": "firstmessage",
+                "aliases": [
+                    "firstmsg"
+                ],
+                "description": "Get a link for the first message in a channel",
+                "syntax": "firstmessage",
+                "example": "firstmessage",
+                "module": "information"
+            },
+            {
+                "name": "guildbanner",
+                "aliases": [
+                    "gb"
+                ],
+                "description": "Show the server banner of a guild",
+                "syntax": "guildbanner <invite>",
+                "example": "guildbanner wockbot",
+                "module": "information"
+            },
+            {
+                "name": "guildicon",
+                "aliases": [
+                    "gi"
+                ],
+                "description": "Show the server icon of a guild",
+                "syntax": "guildicon <invite>",
+                "example": "guildicon wockbot",
+                "module": "information"
+            },
+            {
+                "name": "help",
+                "aliases": [
+                    "h"
+                ],
+                "description": "Displays a list of all available commands",
+                "syntax": "help [command|module]",
+                "example": "help information",
+                "permissions": "N/A",
+                "module": "information"
+            },
+            {
+                "name": "inrole",
+                "aliases": [
+                    "rolemembers"
+                ],
+                "description": "Shows all members inside of the mentioned role",
+                "syntax": "inrole <@role>",
+                "example": "inrole @Mandem",
+                "module": "information"
+            },
+            {
+                "name": "invite",
+                "description": "Get the invite link for the bot.",
+                "syntax": "invite",
+                "example": "invite",
+                "aliases": [
+                    "inv"
+                ],
+                "module": "information"
+            },
+            {
+                "name": "inviteinfo",
+                "description": "Fetches information about the provided invite link.",
+                "syntax": "inviteinfo <invite>",
+                "example": "inviteinfo wockbot",
+                "aliases": [
+                    "ii"
+                ],
+                "module": "information"
+            },
+            {
+                "name": "iplookup",
+                "aliases": [
+                    "ip"
+                ],
+                "description": "Lookup information about an IP address",
+                "syntax": "iplookup <ip>",
+                "example": "iplookup",
+                "module": "information"
+            },
+            {
+                "name": "membercount",
+                "aliases": [
+                    "mc",
+                    "members"
+                ],
+                "description": "View server member count",
+                "syntax": "membercount",
+                "example": "membercount",
+                "module": "information"
+            },
+            {
+                "name": "ping",
+                "aliases": [
+                    "pong"
+                ],
+                "description": "Pong!",
+                "syntax": "ping",
+                "example": "ping",
+                "permissions": "N/A",
+                "module": "information"
+            },
+            {
+                "name": "roles",
+                "aliases": [
+                    "rolelist"
+                ],
+                "description": "Displays a list of all roles in the server",
+                "syntax": "roles",
+                "example": "roles",
+                "module": "information"
+            },
+            {
+                "name": "splash",
+                "aliases": [
+                    "splash",
+                    "sspl"
+                ],
+                "description": "Show the server splash of a guild",
+                "syntax": "serversplash <invite>",
+                "example": "serversplash wockbot",
+                "module": "information"
+            },
+            {
+                "name": "support",
+                "aliases": [
+                    "support"
+                ],
+                "description": "Shows the support server of the bot",
+                "syntax": "support",
+                "example": "support",
+                "module": "information"
+            },
+            {
+                "name": "uptime",
+                "aliases": [
+                    "none"
+                ],
+                "description": "Shows the bot's uptime",
+                "syntax": "uptime",
+                "example": "uptime",
+                "module": "information"
+            }
+        ],
+        "miscellaneous": [
+            {
+                "name": "appstore",
+                "aliases": [
+                    "playstore",
+                    "app"
+                ],
+                "description": "View an app on the app store",
+                "syntax": "appstore <query>",
+                "example": "appstore Uber",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "birthday",
+                "aliases": [
+                    "bday"
+                ],
+                "description": "Manage and view your birthday",
+                "syntax": "birthday <subcommand> (args)",
+                "example": "birthday set december 24",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "birthday set",
+                "description": "Set your birthday",
+                "syntax": "birthday set <month> <day>",
+                "example": "birthday set december 24",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "birthday view",
+                "description": "View your set birthday",
+                "syntax": "birthday view",
+                "example": "birthday view",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "birthday reset",
+                "description": "Reset your birthday",
+                "syntax": "birthday reset",
+                "example": "birthday reset",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "bmi",
+                "aliases": [
+                    "none"
+                ],
+                "description": "Shows the body mass index (BMI)",
+                "syntax": "bmi <height> <weight>",
+                "example": "bmi 5'10 160",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "color",
+                "aliases": [
+                    "colour"
+                ],
+                "description": "Get information about a color",
+                "syntax": "color <hex>",
+                "example": "color #000000",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "dominant",
+                "description": "Fetches the dominant color of an image attachment",
+                "syntax": "dominant",
+                "example": "dominant",
+                "permissions": "N/A",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "fortnite",
+                "aliases": [
+                    "fort",
+                    "fn"
+                ],
+                "description": "View Fortnite related information",
+                "syntax": "fortnite <subcommand> (args)",
+                "example": "fortnite lookup Renegade Raider",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "fortnite lookup",
+                "description": "Lookup Fortnite cosmetics",
+                "syntax": "fortnite lookup <cosmetic>",
+                "example": "fortnite lookup Renegade Raider",
+                "permissions": "N/A",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "fortnite shop",
+                "description": "View the Fortnite item shop",
+                "syntax": "fortnite shop",
+                "example": "fortnite shop",
+                "permissions": "N/A",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "google",
+                "aliases": [
+                    "g"
+                ],
+                "description": "Search the largest search engine on the internet",
+                "syntax": "google (search)",
+                "example": "google How to get a girlfriend",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "image",
+                "description": "Search google for images",
+                "aliases": [
+                    "img"
+                ],
+                "syntax": "image [query]",
+                "example": "image cat",
+                "permissions": "N/A",
+                "parameters": "query",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "itunes",
+                "aliases": [
+                    "itu"
+                ],
+                "description": "Finds a song from the iTunes API",
+                "syntax": "itunes <query>",
+                "example": "itunes Run Your Mouth",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "jumbo",
+                "aliases": [
+                    "e",
+                    "enlarge"
+                ],
+                "description": "Returns a large emoji or server emote",
+                "syntax": "jumbo <emoji>",
+                "example": "jumbo :boss:",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "pokemon",
+                "aliases": [
+                    "poke"
+                ],
+                "description": "View information about a Pokémon",
+                "syntax": "pokemon <pokemon>",
+                "example": "pokemon pikachu",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "qr",
+                "aliases": [
+                    "qrcode"
+                ],
+                "description": "Create and read QR codes",
+                "syntax": "qr <subcommand> (args)",
+                "example": "qr create https://wock.club",
+                "permissions": "N/A",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "qr create",
+                "description": "Create a QR code that directs to a website",
+                "syntax": "qr create <website>",
+                "example": "qr create https://wock.club",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "qr read",
+                "description": "Read a QR code from an image attachment",
+                "syntax": "qr read <attachment>",
+                "example": "qr read qrcode.png",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "screenshot",
+                "description": "Takes a screenshot of the provided URL",
+                "syntax": "screenshot <url> [--wait <seconds>]",
+                "example": "screenshot wock.club --wait 5",
+                "permissions": "N/A",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "shazam",
+                "aliases": [
+                    "identify"
+                ],
+                "syntax": "shazam <attachment>",
+                "example": "shazam lain.mp3",
+                "description": "Search for a song on Shazam",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "soundcloud",
+                "description": "Search SoundCloud for song results",
+                "syntax": "soundcloud <query>",
+                "example": "soundcloud Run Your Mouth",
+                "aliases": [
+                    "sc"
+                ],
+                "module": "miscellaneous"
+            },
+            {
+                "name": "spotify",
+                "aliases": [
+                    "sp"
+                ],
+                "description": "Search spotify for a song",
+                "syntax": "spotify <query>",
+                "example": "spotify Run Your Mouth",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "steam",
+                "aliases": [
+                    "game"
+                ],
+                "description": "Search Steam for a game",
+                "syntax": "steam <game>",
+                "example": "steam CSGO",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "timezone",
+                "aliases": [
+                    "tz"
+                ],
+                "description": "Manage and view your timezone",
+                "syntax": "timezone <subcommand> (args)",
+                "example": "timezone set Chicago",
+                "module": "miscellaneous",
+                "set": {
+                    "name": "timezone set",
+                    "description": "Set your timezone",
+                    "syntax": "timezone set <location>",
+                    "example": "timezone set Chicago",
+                    "module": "miscellaneous"
+                },
+                "view": {
+                    "name": "timezone view",
+                    "description": "View your set timezone",
+                    "syntax": "timezone view",
+                    "example": "timezone view",
+                    "module": "miscellaneous"
+                },
+                "reset": {
+                    "name": "timezone reset",
+                    "description": "Reset your timezone",
+                    "syntax": "timezone reset",
+                    "example": "timezone reset",
+                    "module": "miscellaneous"
+                }
+            },
+            {
+                "name": "translate",
+                "aliases": [
+                    "tr"
+                ],
+                "description": "Translates text",
+                "syntax": "translate <language> <text>",
+                "example": "translate french whats up",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "weather",
+                "aliases": [
+                    "wthr"
+                ],
+                "description": "Manage and view your weather settings",
+                "syntax": "weather <subcommand> (args)",
+                "example": "weather set clearwater",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "weather set",
+                "description": "Set your default city for weather",
+                "syntax": "weather set <city>",
+                "example": "weather set clearwater",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "weather view",
+                "description": "View your set city for weather",
+                "syntax": "weather view",
+                "example": "weather view",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "weather reset",
+                "description": "Reset your default city for weather",
+                "syntax": "weather reset",
+                "example": "weather reset",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "wikipedia",
+                "aliases": [
+                    "wiki"
+                ],
+                "description": "Search wiki for a query",
+                "syntax": "wikipedia <query>",
+                "example": "wikipedia earth",
+                "module": "miscellaneous"
+            },
+            {
+                "name": "wolfram",
+                "aliases": [
+                    "w"
+                ],
+                "description": "Get math answers",
+                "syntax": "wolfram <query>",
+                "example": "wolfram 2+2",
+                "module": "miscellaneous"
+            }
+        ],
+        "moderation": [
+            {
+                "name": "auditlogs",
+                "aliases": [
+                    "audit",
+                    "auditlog"
+                ],
+                "description": "View the audit log for the server",
+                "syntax": "auditlog",
+                "example": "auditlog",
+                "permissions": "VIEW_AUDIT_LOG",
+                "module": "moderation"
+            },
+            {
+                "name": "ban",
+                "aliases": [
+                    "deport"
+                ],
+                "description": "Bans the mentioned user from the guild",
+                "syntax": "ban <member> (reason)",
+                "example": "ban @c2rter Bad Boy",
+                "permissions": "BAN_MEMBERS",
+                "module": "moderation"
+            },
+            {
+                "name": "banreason",
+                "aliases": [
+                    "br"
+                ],
+                "description": "Check the reason why this member was banned",
+                "syntax": "banreason <user>",
+                "example": "banreason @c2rter",
+                "module": "moderation",
+                "permissions": "BAN_MEMBERS"
+            },
+            {
+                "name": "cleanup",
+                "aliases": [
+                    "none"
+                ],
+                "description": "Deletes commands and messages from bots",
+                "syntax": "cleanup <amount>",
+                "example": "cleanup 10",
+                "permissions": "MANAGE_MESSAGES",
+                "module": "moderation"
+            },
+            {
+                "name": "emoji",
+                "aliases": [
+                    "none"
+                ],
+                "description": "Manage server emojis",
+                "syntax": "emoji <subcommand> (args)",
+                "example": "emoji add :smile:",
+                "module": "moderation",
+                "permissions": "MANAGE_EMOJIS"
+            },
+            {
+                "name": "emoji add",
+                "description": "Add an emoji to the server",
+                "syntax": "emoji add <emoji> (name)",
+                "example": "emoji add :smile: smile",
+                "permissions": "MANAGE_EMOJIS",
+                "module": "moderation"
+            },
+            {
+                "name": "emoji remove",
+                "description": "Remove an emoji from the server",
+                "syntax": "emoji remove <emoji>",
+                "example": "emoji remove :smile:",
+                "permissions": "MANAGE_EMOJIS",
+                "module": "moderation"
+            },
+            {
+                "name": "emoji info",
+                "description": "Get information about an emoji",
+                "syntax": "emoji info <emoji>",
+                "example": "emoji info :smile:",
+                "permissions": "MANAGE_EMOJIS",
+                "module": "moderation"
+            },
+            {
+                "name": "emoji list",
+                "description": "List all server emojis",
+                "syntax": "emoji list",
+                "example": "emoji list",
+                "permissions": "MANAGE_EMOJIS",
+                "module": "moderation"
+            },
+            {
+                "name": "emoji addmany",
+                "description": "Add multiple emojis to the server",
+                "syntax": "emoji addmany <emojis>",
+                "example": "emoji addmany :smile: :laughing: :wink:",
+                "permissions": "MANAGE_EMOJIS",
+                "module": "moderation"
+            },
+            {
+                "name": "hackban",
+                "aliases": [
+                    "hb"
+                ],
+                "description": "Ban a user outside of the server",
+                "syntax": "hackban <user_id> (reason)",
+                "example": "hackban 731935983389638739",
+                "module": "moderation"
+            },
+            {
+                "name": "hide",
+                "aliases": [
+                    "hide"
+                ],
+                "description": "Hide a channel from everyone",
+                "syntax": "hide [channel]",
+                "example": "hide #general",
+                "permissions": "MANAGE_CHANNELS",
+                "module": "moderation"
+            },
+            {
+                "name": "hide all",
+                "description": "Hide all channels in a category",
+                "syntax": "hide all",
+                "example": "hide all",
+                "module": "moderation"
+            },
+            {
+                "name": "invites",
+                "aliases": [
+                    "invites"
+                ],
+                "description": "View all of the invites in a server",
+                "syntax": "invites",
+                "example": "invites",
+                "permissions": "MANAGE_CHANNELS",
+                "module": "moderation"
+            },
+            {
+                "name": "invites delete",
+                "description": "Delete an invite",
+                "syntax": "invites delete <invite_code>",
+                "example": "invites delete 6hQnzfxQ",
+                "module": "moderation"
+            },
+            {
+                "name": "invites clear",
+                "description": "Clear all invites",
+                "syntax": "invites clear",
+                "example": "invites clear",
+                "module": "moderation"
+            },
+            {
+                "name": "invites create",
+                "description": "Create an invite",
+                "syntax": "invites create",
+                "example": "invites create",
+                "module": "moderation"
+            },
+            {
+                "name": "jail",
+                "aliases": [
+                    "none"
+                ],
+                "description": "Jails the mentioned user from the guild",
+                "syntax": "jail (member)",
+                "example": "jail @c2rter",
+                "module": "moderation",
+                "permissions": "MANAGE_GUILD"
+            },
+            {
+                "name": "jail config",
+                "description": "Shows the configured jail settings",
+                "syntax": "jail config",
+                "example": "jail config",
+                "module": "moderation"
+            },
+            {
+                "name": "jail restore",
+                "description": "Restores and recreates the jail role and channel",
+                "syntax": "jail restore",
+                "example": "jail restore",
+                "module": "moderation"
+            },
+            {
+                "name": "lockdown",
+                "aliases": [
+                    "lock"
+                ],
+                "description": "Locks a channel or all channels in a category",
+                "syntax": "lockdown <channel>",
+                "example": "lockdown #general",
+                "permissions": "MANAGE_CHANNELS",
+                "module": "moderation"
+            },
+            {
+                "name": "lockdown all",
+                "description": "Lock all channels in a category",
+                "syntax": "lockdown all",
+                "example": "lockdown all",
+                "module": "moderation"
+            },
+            {
+                "name": "modhistory",
+                "aliases": [
+                    "modhist"
+                ],
+                "description": "View the moderation history for a user",
+                "syntax": "modhistory <user>",
+                "example": "modhistory @user",
+                "permissions": "VIEW_AUDIT_LOG",
+                "module": "moderation"
+            },
+            {
+                "name": "nuke",
+                "description": "Clone the channel and delete the original one",
+                "aliases": [
+                    "none"
+                ],
+                "syntax": "nuke",
+                "example": "nuke",
+                "permissions": "MANAGE_CHANNELS",
+                "module": "moderation"
+            },
+            {
+                "name": "purge",
+                "aliases": [
+                    "clear",
+                    "c"
+                ],
+                "description": "Purge messages from a channel",
+                "syntax": "purge <messages>",
+                "example": "purge 100",
+                "permissions": "MANAGE_MESSAGES",
+                "module": "moderation"
+            },
+            {
+                "name": "purge bots",
+                "description": "Purge messages from bots",
+                "syntax": "purge bots <number>",
+                "example": "purge bots 10",
+                "permissions": "MANAGE_MESSAGES",
+                "module": "moderation"
+            },
+            {
+                "name": "purge images",
+                "description": "Purge messages with images",
+                "syntax": "purge images <number>",
+                "example": "purge images 10",
+                "permissions": "MANAGE_MESSAGES",
+                "module": "moderation"
+            },
+            {
+                "name": "purge embeds",
+                "description": "Purge messages with embeds",
+                "syntax": "purge embeds <number>",
+                "example": "purge embeds 10",
+                "permissions": "MANAGE_MESSAGES",
+                "module": "moderation"
+            },
+            {
+                "name": "purge reactions",
+                "description": "Remove reactions from messages",
+                "syntax": "purge reactions <number>",
+                "example": "purge reactions 10",
+                "permissions": "MANAGE_MESSAGES",
+                "module": "moderation"
+            },
+            {
+                "name": "purge emojis",
+                "description": "Purge messages with emojis",
+                "syntax": "purge emojis <number>",
+                "example": "purge emojis 10",
+                "permissions": "MANAGE_MESSAGES",
+                "module": "moderation"
+            },
+            {
+                "name": "seticon",
+                "description": "Set the icon of the server",
+                "syntax": "seticon <attachment>",
+                "example": "seticon wock.png",
+                "permissions": "MANAGE_GUILD",
+                "module": "moderation"
+            },
+            {
+                "name": "unhide",
+                "aliases": [
+                    "unhide"
+                ],
+                "description": "Unhide a channel for everyone",
+                "syntax": "unhide [channel]",
+                "example": "unhide #general",
+                "permissions": "MANAGE_CHANNELS",
+                "module": "moderation"
+            },
+            {
+                "name": "unhide all",
+                "description": "Unhide all channels in a category",
+                "syntax": "unhide all",
+                "example": "unhide all",
+                "module": "moderation"
+            },
+            {
+                "name": "unlock",
+                "aliases": [
+                    "unlock"
+                ],
+                "description": "Unlocks a channel or all channels in a category",
+                "syntax": "unlock <channel>",
+                "example": "unlock #general",
+                "permissions": "MANAGE_CHANNELS",
+                "module": "moderation"
+            },
+            {
+                "name": "unlock all",
+                "description": "Unlock all channels in a category",
+                "syntax": "unlock all",
+                "example": "unlock all",
+                "module": "moderation"
+            },
+            {
+                "name": "webhook",
+                "aliases": [
+                    "hook",
+                    "wh"
+                ],
+                "description": "Manage webhooks in the guild",
+                "syntax": "webhook <subcommand> <args>",
+                "example": "webhook delete boss",
+                "permissions": "MANAGE_GUILD",
+                "module": "moderation"
+            },
+            {
+                "name": "webhook create",
+                "description": "Create a webhook in the specified channel",
+                "syntax": "webhook create #channel <name> (attachment)",
+                "example": "webhook create #rules boss wock.png",
+                "permissions": "MANAGE_GUILD",
+                "module": "moderation"
+            },
+            {
+                "name": "webhook delete",
+                "description": "Delete an existing webhook by its name",
+                "syntax": "webhook delete <name>",
+                "example": "webhook delete boss",
+                "permissions": "MANAGE_GUILD",
+                "module": "moderation"
+            },
+            {
+                "name": "webhook send",
+                "description": "Send a message through a webhook",
+                "syntax": "webhook send <webhook_id> <message>",
+                "example": "webhook send 123456789012345678 Hello, world!",
+                "permissions": "MANAGE_GUILD",
+                "module": "moderation"
+            },
+            {
+                "name": "webhook list",
+                "description": "View all webhooks in the guild",
+                "syntax": "webhook list",
+                "example": "webhook list",
+                "permissions": "MANAGE_GUILD",
+                "module": "moderation"
+            },
+            {
+                "name": "webhook edit",
+                "description": "Edit a webhook's name or avatar",
+                "syntax": "webhook edit <avatar|name> <new_avatar|name>",
+                "example": "webhook edit avatar <attachment>",
+                "permissions": "MANAGE_GUILD",
+                "module": "moderation"
+            }
+        ],
+        "socials": [
+            {
+                "name": "cashapp",
+                "aliases": [
+                    "ca"
+                ],
+                "description": "Manage and view your CashApp username",
+                "syntax": "cashapp (username)",
+                "example": "cashapp crrter",
+                "module": "socials"
+            },
+            {
+                "name": "cashapp set",
+                "description": "Set your CashApp username",
+                "syntax": "cashapp set <username>",
+                "example": "cashapp set crrter",
+                "module": "socials"
+            },
+            {
+                "name": "cashapp reset",
+                "description": "Reset your CashApp username",
+                "syntax": "cashapp reset",
+                "example": "cashapp reset",
+                "module": "socials"
+            },
+            {
+                "name": "cashapp view",
+                "description": "View your CashApp username",
+                "syntax": "cashapp view",
+                "example": "cashapp view",
+                "module": "socials"
+            },
+            {
+                "name": "github",
+                "description": "Manage and view your GitHub username",
+                "syntax": "github (username)",
+                "example": "github enlarged",
+                "aliases": [
+                    "git",
+                    "gh"
+                ],
+                "module": "socials"
+            },
+            {
+                "name": "github set",
+                "description": "Set your GitHub username",
+                "syntax": "github set <username>",
+                "example": "github set enlarged",
+                "module": "socials"
+            },
+            {
+                "name": "github reset",
+                "description": "Reset your GitHub username",
+                "syntax": "github reset",
+                "example": "github reset",
+                "module": "socials"
+            },
+            {
+                "name": "github view",
+                "description": "View your GitHub username",
+                "syntax": "github view",
+                "example": "github view",
+                "module": "socials"
+            },
+            {
+                "name": "socials",
+                "aliases": [
+                    "social"
+                ],
+                "description": "View your or another member's socials",
+                "syntax": "socials (member)",
+                "example": "socials @c2rter",
+                "module": "socials"
+            },
+            {
+                "name": "socials clear",
+                "description": "Clear all of your socials",
+                "syntax": "socials clear",
+                "example": "socials clear",
+                "module": "socials"
+            },
+            {
+                "name": "tiktok",
+                "aliases": [
+                    "tt"
+                ],
+                "description": "Gets profile information on the given TikTok user",
+                "syntax": "tiktok <username>",
+                "example": "tiktok kyliejenner",
+                "module": "socials"
+            },
+            {
+                "name": "tiktok set",
+                "description": "Set your TikTok username",
+                "syntax": "tiktok set <username>",
+                "example": "tiktok set kyliejenner",
+                "module": "socials"
+            },
+            {
+                "name": "tiktok reset",
+                "description": "Reset your TikTok username",
+                "syntax": "tiktok reset",
+                "example": "tiktok reset",
+                "module": "socials"
+            },
+            {
+                "name": "tiktok view",
+                "description": "View your TikTok username",
+                "syntax": "tiktok view",
+                "example": "tiktok view",
+                "module": "socials"
+            },
+            {
+                "name": "twitter",
+                "aliases": [
+                    "x"
+                ],
+                "description": "View a twitter profile",
+                "syntax": "twitter (username)",
+                "example": "twitter spacex",
+                "module": "socials"
+            },
+            {
+                "name": "twitter set",
+                "description": "Set your Twitter username",
+                "syntax": "twitter set <username>",
+                "example": "twitter set spacex",
+                "module": "socials"
+            },
+            {
+                "name": "twitter reset",
+                "description": "Reset your Twitter username",
+                "syntax": "twitter reset",
+                "example": "twitter reset",
+                "module": "socials"
+            },
+            {
+                "name": "twitter view",
+                "description": "View your Twitter username",
+                "syntax": "twitter view",
+                "example": "twitter view",
+                "module": "socials"
+            },
+            {
+                "name": "xbox",
+                "aliases": [
+                    "xb",
+                    "xbl"
+                ],
+                "description": "Manage and view your Xbox gamertag",
+                "syntax": "xbox <username>",
+                "example": "xbox c9ce",
+                "module": "socials"
+            },
+            {
+                "name": "xbox set",
+                "description": "Set your Xbox gamertag",
+                "syntax": "xbox set <gamertag>",
+                "example": "xbox set c9ce",
+                "module": "socials"
+            },
+            {
+                "name": "xbox reset",
+                "description": "Reset your Xbox gamertag",
+                "syntax": "xbox reset",
+                "example": "xbox reset",
+                "module": "socials"
+            },
+            {
+                "name": "xbox view",
+                "description": "View your Xbox gamertag",
+                "syntax": "xbox view",
+                "example": "xbox view",
+                "module": "socials"
+            },
+            {
+                "name": "youtube",
+                "aliases": [
+                    "yt"
+                ],
+                "description": "Search YouTube for video results",
+                "syntax": "youtube <query>",
+                "example": "youtube Cute kittens",
+                "module": "socials"
+            }
+        ]
+    },
+    "all": [
+        {
+            "name": "antinuke",
+            "aliases": [
+                "an"
+            ],
+            "description": "Manage the antinuke settings for the guild",
+            "syntax": "antinuke <subcommand> <args>",
+            "example": "antinuke enable",
+            "permissions": "ADMINISTRATOR",
+            "module": "automod"
+        },
+        {
+            "name": "antinuke enable",
+            "description": "Enable the antinuke system",
+            "syntax": "antinuke enable",
+            "example": "antinuke enable",
+            "permissions": "ADMINISTRATOR",
+            "module": "automod"
+        },
+        {
+            "name": "antinuke disable",
+            "description": "Disable the antinuke system",
+            "syntax": "antinuke disable",
+            "example": "antinuke disable",
+            "permissions": "ADMINISTRATOR",
+            "module": "automod"
+        },
+        {
+            "name": "antinuke whitelist",
+            "description": "Whitelist a user from the antinuke system",
+            "syntax": "antinuke whitelist <user>",
+            "example": "antinuke whitelist @c2rter",
+            "permissions": "ADMINISTRATOR",
+            "module": "automod"
+        },
+        {
+            "name": "antinuke unwhitelist",
+            "description": "Unwhitelist a user from the antinuke system",
+            "syntax": "antinuke unwhitelist <user>",
+            "example": "antinuke unwhitelist @c2rter",
+            "permissions": "ADMINISTRATOR",
+            "module": "automod"
+        },
+        {
+            "name": "antinuke config",
+            "description": "View the current antinuke configuration",
+            "syntax": "antinuke config",
+            "example": "antinuke config",
+            "permissions": "ADMINISTRATOR",
+            "module": "automod"
+        },
+        {
+            "name": "antinuke reset",
+            "description": "Reset the antinuke settings",
+            "syntax": "antinuke reset",
+            "example": "antinuke reset",
+            "permissions": "ADMINISTRATOR",
+            "module": "automod"
+        },
+        {
+            "name": "antinuke admin",
+            "description": "Add or remove an antinuke admin",
+            "syntax": "antinuke admin <add|remove> (user)",
+            "example": "antinuke admin add @c2rter",
+            "permissions": "ADMINISTRATOR",
+            "module": "automod"
+        },
+        {
+            "name": "antinuke whitelisted",
+            "description": "View whitelisted users",
+            "syntax": "antinuke whitelisted",
+            "example": "antinuke whitelisted",
+            "permissions": "ADMINISTRATOR",
+            "module": "automod"
+        },
+        {
+            "name": "autorole",
+            "aliases": [
+                "none"
+            ],
+            "description": "Manage the autorole settings for the guild",
+            "syntax": "autorole <subcommand> <args>",
+            "example": "autorole add @role",
+            "permissions": "MANAGE_GUILD",
+            "module": "configuration"
+        },
+        {
+            "name": "autorole add",
+            "description": "Set the autorole for the guild",
+            "syntax": "autorole add <role>",
+            "example": "autorole add @role",
+            "permissions": "MANAGE_GUILD",
+            "module": "configuration"
+        },
+        {
+            "name": "autorole remove",
+            "description": "Remove the autorole for the guild",
+            "syntax": "autorole remove <role>",
+            "example": "autorole remove @role",
+            "permissions": "MANAGE_GUILD",
+            "module": "configuration"
+        },
+        {
+            "name": "autorole view",
+            "description": "View the autorole for the guild",
+            "syntax": "autorole view",
+            "example": "autorole view",
+            "permissions": "MANAGE_GUILD",
+            "module": "configuration"
+        },
+        {
+            "name": "embeds",
+            "aliases": [
+                "none"
+            ],
+            "description": "Manage most embed settings for the server",
+            "syntax": "embeds <subcommand>",
+            "example": "embeds enable",
+            "permissions": "MANAGE_GUILD",
+            "module": "configuration"
+        },
+        {
+            "name": "embeds enable",
+            "description": "Enable embeds for the server",
+            "syntax": "embeds enable",
+            "example": "embeds enable",
+            "permissions": "MANAGE_GUILD",
+            "module": "configuration"
+        },
+        {
+            "name": "embeds disable",
+            "description": "Disable embeds for the server",
+            "syntax": "embeds disable",
+            "example": "embeds disable",
+            "permissions": "MANAGE_GUILD",
+            "module": "configuration"
+        },
+        {
+            "name": "fakepermissions",
+            "aliases": [
+                "fp"
+            ],
+            "description": "Manage trusted roles for fake permissions",
+            "syntax": "fakepermissions <subcommand> (args)",
+            "example": "fakepermissions add @admin",
+            "permissions": "MANAGE_GUILD",
+            "module": "configuration"
+        },
+        {
+            "name": "fakepermissions add",
+            "description": "Add a role to the trusted roles list",
+            "syntax": "fakepermissions add <role>",
+            "example": "fakepermissions add @role",
+            "permissions": "MANAGE_GUILD",
+            "module": "configuration"
+        },
+        {
+            "name": "fakepermissions remove",
+            "description": "Remove a role from the trusted roles list",
+            "syntax": "fakepermissions remove <role>",
+            "example": "fakepermissions remove @role",
+            "permissions": "MANAGE_GUILD",
+            "module": "configuration"
+        },
+        {
+            "name": "fakepermissions list",
+            "description": "List all trusted roles",
+            "syntax": "fakepermissions list",
+            "example": "fakepermissions list",
+            "permissions": "MANAGE_GUILD",
+            "module": "configuration"
+        },
+        {
+            "name": "fakepermissions clear",
+            "description": "Clear all trusted roles",
+            "syntax": "fakepermissions clear",
+            "example": "fakepermissions clear",
+            "permissions": "MANAGE_GUILD",
+            "module": "configuration"
+        },
+        {
+            "name": "notifications",
+            "aliases": [
+                "logs"
+            ],
+            "description": "Manage the notification settings for the guild",
+            "syntax": "notifications <subcommand> <args>",
+            "example": "notifications add mod-logs",
+            "permissions": "MANAGE_GUILD",
+            "module": "configuration"
+        },
+        {
+            "name": "notifications add",
+            "description": "Set the notifications channel",
+            "syntax": "notifications add #channel",
+            "example": "notifications add mod-logs",
+            "permissions": "MANAGE_GUILD",
+            "module": "configuration"
+        },
+        {
+            "name": "notifications reset",
+            "description": "Reset the notifications settings",
+            "syntax": "notifications reset",
+            "example": "notifications reset",
+            "permissions": "MANAGE_GUILD",
+            "module": "configuration"
+        },
+        {
+            "name": "notifications view",
+            "description": "View the notifications channel",
+            "syntax": "notifications view",
+            "example": "notifications view",
+            "permissions": "MANAGE_GUILD",
+            "module": "configuration"
+        },
+        {
+            "name": "prefix",
+            "aliases": [
+                "setprefix"
+            ],
+            "description": "Manage the bot's prefix within your server",
+            "syntax": "prefix <subcommand> (args)",
+            "example": "prefix set !",
+            "permissions": "MANAGE_GUILD",
+            "module": "configuration"
+        },
+        {
+            "name": "prefix set",
+            "description": "Set a new prefix for the bot",
+            "syntax": "prefix set <new prefix>",
+            "example": "prefix set !",
+            "permissions": "MANAGE_GUILD",
+            "module": "configuration"
+        },
+        {
+            "name": "prefix reset",
+            "description": "Reset the prefix to the default",
+            "syntax": "prefix reset",
+            "example": "prefix reset",
+            "permissions": "MANAGE_GUILD",
+            "module": "configuration"
+        },
+        {
+            "name": "removejail",
+            "aliases": [
+                "removej"
+            ],
+            "description": "Removes the jail role and channel",
+            "syntax": "removejail",
+            "example": "removejail",
+            "module": "configuration",
+            "permissions": "MANAGE_GUILD"
+        },
+        {
+            "name": "setupjail",
+            "aliases": [
+                "setupj"
+            ],
+            "description": "Sets up the jail role and channel",
+            "syntax": "setupjail",
+            "example": "setupjail",
+            "module": "configuration",
+            "permissions": "MANAGE_GUILD"
+        },
+        {
+            "name": "json",
+            "description": "Returns all of the commands in a JSON file split by module and all",
+            "syntax": "json",
+            "example": "json",
+            "permissions": "BOT_OWNER",
+            "module": "developer"
+        },
+        {
+            "name": "eval",
+            "aliases": [
+                "js"
+            ],
+            "description": "Evaluate JavaScript code.",
+            "syntax": "eval <code>",
+            "example": "eval message.guild",
+            "permissions": "Bot Developer",
+            "module": "developer"
+        },
+        {
+            "name": "reload",
+            "description": "Reloads all commands.",
+            "aliases": [
+                "rl"
+            ],
+            "syntax": "reload",
+            "example": "reload",
+            "permissions": "N/A",
+            "module": "developer"
+        },
+        {
+            "name": "setavatar",
+            "aliases": [
+                "setav"
+            ],
+            "description": "Set the bot's avatar",
+            "syntax": "setavatar <url>",
+            "example": "setavatar https://wock.club/wock.png",
+            "permissions": "BOT_OWNER",
+            "module": "developer"
+        },
+        {
+            "name": "balance",
+            "aliases": [
+                "bal"
+            ],
+            "description": "Check your balance and bank account",
+            "syntax": "balance",
+            "example": "balance",
+            "module": "economy"
+        },
+        {
+            "name": "beg",
+            "description": "Beg for coins",
+            "syntax": "beg",
+            "example": "beg",
+            "module": "economy"
+        },
+        {
+            "name": "coinflip",
+            "aliases": [
+                "flip"
+            ],
+            "description": "Flip a coin and get a random result",
+            "syntax": "coinflip <amount> (option)",
+            "example": "coinflip 100 heads",
+            "module": "economy"
+        },
+        {
+            "name": "coinflip all",
+            "description": "Flip a coin with all your coins",
+            "syntax": "coinflip all (option)",
+            "example": "coinflip all heads",
+            "module": "economy"
+        },
+        {
+            "name": "coinflip half",
+            "description": "Flip a coin with half of your coins",
+            "syntax": "coinflip half (option)",
+            "example": "coinflip half heads",
+            "module": "economy"
+        },
+        {
+            "name": "daily",
+            "aliases": [
+                "dailies"
+            ],
+            "description": "Claim your daily coins",
+            "syntax": "daily",
+            "example": "daily",
+            "module": "economy"
+        },
+        {
+            "name": "deposit",
+            "aliases": [
+                "dep"
+            ],
+            "description": "Deposit money from your balance to your bank account",
+            "syntax": "deposit <amount>",
+            "example": "deposit 100",
+            "module": "economy"
+        },
+        {
+            "name": "deposit all",
+            "description": "Deposit all your coins",
+            "syntax": "deposit all",
+            "example": "deposit all",
+            "module": "economy"
+        },
+        {
+            "name": "deposit half",
+            "description": "Deposit half of your coins",
+            "syntax": "deposit half",
+            "example": "deposit half",
+            "module": "economy"
+        },
+        {
+            "name": "give",
+            "aliases": [
+                "transfer"
+            ],
+            "description": "Give money to another user",
+            "syntax": "give <member> (amount)",
+            "example": "give @c2rter 100",
+            "module": "economy"
+        },
+        {
+            "name": "hourly",
+            "description": "Claim your hourly coins",
+            "syntax": "hourly",
+            "example": "hourly",
+            "module": "economy"
+        },
+        {
+            "name": "rob",
+            "aliases": [
+                "steal"
+            ],
+            "description": "Rob a random user and get a random amount of coins",
+            "syntax": "rob <user>",
+            "example": "rob @user",
+            "module": "economy"
+        },
+        {
+            "name": "roll",
+            "aliases": [
+                "dice"
+            ],
+            "description": "Roll a dice and get a random number",
+            "syntax": "roll (amount)",
+            "example": "roll 100",
+            "module": "economy"
+        },
+        {
+            "name": "roll all",
+            "description": "Roll a dice with all your coins",
+            "syntax": "roll all",
+            "example": "roll all",
+            "module": "economy"
+        },
+        {
+            "name": "roll half",
+            "description": "Roll a dice with half of your coins",
+            "syntax": "roll half",
+            "example": "roll half",
+            "module": "economy"
+        },
+        {
+            "name": "sell",
+            "aliases": [
+                "none"
+            ],
+            "description": "Sell your caught fish or hunted animals for money",
+            "syntax": "sell",
+            "example": "sell",
+            "module": "economy"
+        },
+        {
+            "name": "withdrawal",
+            "aliases": [
+                "with"
+            ],
+            "description": "Withdraw money from your bank account to your balance",
+            "syntax": "withdrawal <amount>",
+            "example": "withdrawal 100",
+            "module": "economy"
+        },
+        {
+            "name": "withdrawal all",
+            "description": "Withdrawal all your coins",
+            "syntax": "withdrawal all",
+            "example": "deposit all",
+            "module": "economy"
+        },
+        {
+            "name": "withdrawal half",
+            "description": "Withdrawal half of your coins",
+            "syntax": "withdrawal half",
+            "example": "withdrawal half",
+            "module": "economy"
+        },
+        {
+            "name": "work",
+            "aliases": [
+                "job"
+            ],
+            "description": "Work to earn coins",
+            "syntax": "work",
+            "example": "work",
+            "module": "economy"
+        },
+        {
+            "name": "backpack",
+            "aliases": [
+                "bag"
+            ],
+            "description": "Shows everything in your backpack",
+            "syntax": "inventory",
+            "example": "inventory",
+            "module": "fun"
+        },
+        {
+            "name": "battle",
+            "aliases": [
+                "fight"
+            ],
+            "description": "Battle your pokemon against another user's",
+            "syntax": "battle (member)",
+            "example": "battle @c2rter",
+            "module": "fun"
+        },
+        {
+            "name": "blackjack",
+            "aliases": [
+                "bj"
+            ],
+            "description": "Play a game of blackjack to gamble your money.",
+            "syntax": "blackjack <amount>",
+            "example": "blackjack 100",
+            "module": "fun"
+        },
+        {
+            "name": "catch",
+            "aliases": [
+                "capture"
+            ],
+            "description": "Catch a Pokémon",
+            "syntax": "catch",
+            "example": "catch",
+            "module": "fun"
+        },
+        {
+            "name": "cuddle",
+            "aliases": [
+                "none"
+            ],
+            "description": "Cuddle with a member",
+            "syntax": "cuddle (member)",
+            "example": "cuddle @c2rter",
+            "module": "fun"
+        },
+        {
+            "name": "divorce",
+            "aliases": [
+                "none"
+            ],
+            "description": "Divorce your partner",
+            "syntax": "divorce",
+            "example": "divorce",
+            "module": "fun"
+        },
+        {
+            "name": "feed",
+            "aliases": [
+                "none"
+            ],
+            "description": "Feed a member",
+            "syntax": "feed (member)",
+            "example": "feed @c2rter",
+            "module": "fun"
+        },
+        {
+            "name": "fish",
+            "aliases": [
+                "fishing"
+            ],
+            "description": "Go fishing and catch some fish!",
+            "syntax": "fish",
+            "example": "fish",
+            "module": "fun"
+        },
+        {
+            "name": "hug",
+            "aliases": [
+                "none"
+            ],
+            "description": "Hug a member",
+            "syntax": "hug (member)",
+            "example": "hug @c2rter",
+            "module": "fun"
+        },
+        {
+            "name": "hunt",
+            "aliases": [
+                "none"
+            ],
+            "description": "Go hunting and catch some animals",
+            "module": "economy",
+            "syntax": "hunt",
+            "example": "hunt"
+        },
+        {
+            "name": "kiss",
+            "aliases": [
+                "none"
+            ],
+            "description": "Kiss with a member",
+            "syntax": "kiss (member)",
+            "example": "kiss @c2rter",
+            "module": "fun"
+        },
+        {
+            "name": "marriage",
+            "aliases": [
+                "none"
+            ],
+            "description": "View your or another member's marriage status",
+            "syntax": "marriage (member)",
+            "example": "marriage @c2rter",
+            "module": "fun"
+        },
+        {
+            "name": "marry",
+            "aliases": [
+                "none"
+            ],
+            "description": "Marry someone",
+            "syntax": "marry (member)",
+            "example": "marry @c2rter",
+            "module": "fun"
+        },
+        {
+            "name": "pokedex",
+            "aliases": [
+                "dex"
+            ],
+            "description": "Show your Pokémon collection",
+            "syntax": "pokedex",
+            "example": "pokedex",
+            "module": "fun"
+        },
+        {
+            "name": "rockpaperscissors",
+            "description": "Challenge another user to Rock Paper Scissors",
+            "syntax": "rockpaperscissors (member)",
+            "example": "rockpaperscissors @c2rter",
+            "aliases": [
+                "rps"
+            ],
+            "module": "fun"
+        },
+        {
+            "name": "shopkeeper",
+            "aliases": [
+                "shop"
+            ],
+            "description": "Visit the shop to purchase items",
+            "syntax": "shopkeeper",
+            "example": "shopkeeper",
+            "module": "fun"
+        },
+        {
+            "name": "slap",
+            "aliases": [
+                "none"
+            ],
+            "description": "Slap a member",
+            "syntax": "slap (member)",
+            "example": "slap @c2rter",
+            "module": "fun"
+        },
+        {
+            "name": "snake",
+            "description": "Play a game of Snake",
+            "syntax": "snake",
+            "example": "snake",
+            "aliases": [
+                "sg"
+            ],
+            "module": "fun"
+        },
+        {
+            "name": "tickle",
+            "aliases": [
+                "none"
+            ],
+            "description": "Tickle a member",
+            "syntax": "tickle (member)",
+            "example": "tickle @c2rter",
+            "module": "fun"
+        },
+        {
+            "name": "tictactoe",
+            "aliases": [
+                "ttt"
+            ],
+            "description": "Play a game of Tic Tac Toe with another member",
+            "syntax": "tictactoe (member)",
+            "example": "tictactoe @c2rter",
+            "module": "fun"
+        },
+        {
+            "name": "avatar",
+            "aliases": [
+                "av"
+            ],
+            "description": "Get avatar of a member or yourself",
+            "syntax": "avatar <user>",
+            "example": "avatar @c2rter",
+            "module": "information"
+        },
+        {
+            "name": "banner",
+            "aliases": [
+                "none"
+            ],
+            "description": "Get the banner of a member or yourself",
+            "syntax": "banner <member>",
+            "example": "banner @c2rter",
+            "module": "information"
+        },
+        {
+            "name": "botinfo",
+            "aliases": [
+                "about",
+                "bi"
+            ],
+            "description": "Shows information about the bo",
+            "syntax": "botinfo",
+            "example": "botinfo",
+            "module": "information"
+        },
+        {
+            "name": "firstmessage",
+            "aliases": [
+                "firstmsg"
+            ],
+            "description": "Get a link for the first message in a channel",
+            "syntax": "firstmessage",
+            "example": "firstmessage",
+            "module": "information"
+        },
+        {
+            "name": "guildbanner",
+            "aliases": [
+                "gb"
+            ],
+            "description": "Show the server banner of a guild",
+            "syntax": "guildbanner <invite>",
+            "example": "guildbanner wockbot",
+            "module": "information"
+        },
+        {
+            "name": "guildicon",
+            "aliases": [
+                "gi"
+            ],
+            "description": "Show the server icon of a guild",
+            "syntax": "guildicon <invite>",
+            "example": "guildicon wockbot",
+            "module": "information"
+        },
+        {
+            "name": "help",
+            "aliases": [
+                "h"
+            ],
+            "description": "Displays a list of all available commands",
+            "syntax": "help [command|module]",
+            "example": "help information",
+            "permissions": "N/A",
+            "module": "information"
+        },
+        {
+            "name": "inrole",
+            "aliases": [
+                "rolemembers"
+            ],
+            "description": "Shows all members inside of the mentioned role",
+            "syntax": "inrole <@role>",
+            "example": "inrole @Mandem",
+            "module": "information"
+        },
+        {
+            "name": "invite",
+            "description": "Get the invite link for the bot.",
+            "syntax": "invite",
+            "example": "invite",
+            "aliases": [
+                "inv"
+            ],
+            "module": "information"
+        },
+        {
+            "name": "inviteinfo",
+            "description": "Fetches information about the provided invite link.",
+            "syntax": "inviteinfo <invite>",
+            "example": "inviteinfo wockbot",
+            "aliases": [
+                "ii"
+            ],
+            "module": "information"
+        },
+        {
+            "name": "iplookup",
+            "aliases": [
+                "ip"
+            ],
+            "description": "Lookup information about an IP address",
+            "syntax": "iplookup <ip>",
+            "example": "iplookup",
+            "module": "information"
+        },
+        {
+            "name": "membercount",
+            "aliases": [
+                "mc",
+                "members"
+            ],
+            "description": "View server member count",
+            "syntax": "membercount",
+            "example": "membercount",
+            "module": "information"
+        },
+        {
+            "name": "ping",
+            "aliases": [
+                "pong"
+            ],
+            "description": "Pong!",
+            "syntax": "ping",
+            "example": "ping",
+            "permissions": "N/A",
+            "module": "information"
+        },
+        {
+            "name": "roles",
+            "aliases": [
+                "rolelist"
+            ],
+            "description": "Displays a list of all roles in the server",
+            "syntax": "roles",
+            "example": "roles",
+            "module": "information"
+        },
+        {
+            "name": "splash",
+            "aliases": [
+                "splash",
+                "sspl"
+            ],
+            "description": "Show the server splash of a guild",
+            "syntax": "serversplash <invite>",
+            "example": "serversplash wockbot",
+            "module": "information"
+        },
+        {
+            "name": "support",
+            "aliases": [
+                "support"
+            ],
+            "description": "Shows the support server of the bot",
+            "syntax": "support",
+            "example": "support",
+            "module": "information"
+        },
+        {
+            "name": "uptime",
+            "aliases": [
+                "none"
+            ],
+            "description": "Shows the bot's uptime",
+            "syntax": "uptime",
+            "example": "uptime",
+            "module": "information"
+        },
+        {
+            "name": "appstore",
+            "aliases": [
+                "playstore",
+                "app"
+            ],
+            "description": "View an app on the app store",
+            "syntax": "appstore <query>",
+            "example": "appstore Uber",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "birthday",
+            "aliases": [
+                "bday"
+            ],
+            "description": "Manage and view your birthday",
+            "syntax": "birthday <subcommand> (args)",
+            "example": "birthday set december 24",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "birthday set",
+            "description": "Set your birthday",
+            "syntax": "birthday set <month> <day>",
+            "example": "birthday set december 24",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "birthday view",
+            "description": "View your set birthday",
+            "syntax": "birthday view",
+            "example": "birthday view",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "birthday reset",
+            "description": "Reset your birthday",
+            "syntax": "birthday reset",
+            "example": "birthday reset",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "bmi",
+            "aliases": [
+                "none"
+            ],
+            "description": "Shows the body mass index (BMI)",
+            "syntax": "bmi <height> <weight>",
+            "example": "bmi 5'10 160",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "color",
+            "aliases": [
+                "colour"
+            ],
+            "description": "Get information about a color",
+            "syntax": "color <hex>",
+            "example": "color #000000",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "dominant",
+            "description": "Fetches the dominant color of an image attachment",
+            "syntax": "dominant",
+            "example": "dominant",
+            "permissions": "N/A",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "fortnite",
+            "aliases": [
+                "fort",
+                "fn"
+            ],
+            "description": "View Fortnite related information",
+            "syntax": "fortnite <subcommand> (args)",
+            "example": "fortnite lookup Renegade Raider",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "fortnite lookup",
+            "description": "Lookup Fortnite cosmetics",
+            "syntax": "fortnite lookup <cosmetic>",
+            "example": "fortnite lookup Renegade Raider",
+            "permissions": "N/A",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "fortnite shop",
+            "description": "View the Fortnite item shop",
+            "syntax": "fortnite shop",
+            "example": "fortnite shop",
+            "permissions": "N/A",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "google",
+            "aliases": [
+                "g"
+            ],
+            "description": "Search the largest search engine on the internet",
+            "syntax": "google (search)",
+            "example": "google How to get a girlfriend",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "image",
+            "description": "Search google for images",
+            "aliases": [
+                "img"
+            ],
+            "syntax": "image [query]",
+            "example": "image cat",
+            "permissions": "N/A",
+            "parameters": "query",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "itunes",
+            "aliases": [
+                "itu"
+            ],
+            "description": "Finds a song from the iTunes API",
+            "syntax": "itunes <query>",
+            "example": "itunes Run Your Mouth",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "jumbo",
+            "aliases": [
+                "e",
+                "enlarge"
+            ],
+            "description": "Returns a large emoji or server emote",
+            "syntax": "jumbo <emoji>",
+            "example": "jumbo :boss:",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "pokemon",
+            "aliases": [
+                "poke"
+            ],
+            "description": "View information about a Pokémon",
+            "syntax": "pokemon <pokemon>",
+            "example": "pokemon pikachu",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "qr",
+            "aliases": [
+                "qrcode"
+            ],
+            "description": "Create and read QR codes",
+            "syntax": "qr <subcommand> (args)",
+            "example": "qr create https://wock.club",
+            "permissions": "N/A",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "qr create",
+            "description": "Create a QR code that directs to a website",
+            "syntax": "qr create <website>",
+            "example": "qr create https://wock.club",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "qr read",
+            "description": "Read a QR code from an image attachment",
+            "syntax": "qr read <attachment>",
+            "example": "qr read qrcode.png",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "screenshot",
+            "description": "Takes a screenshot of the provided URL",
+            "syntax": "screenshot <url> [--wait <seconds>]",
+            "example": "screenshot wock.club --wait 5",
+            "permissions": "N/A",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "shazam",
+            "aliases": [
+                "identify"
+            ],
+            "syntax": "shazam <attachment>",
+            "example": "shazam lain.mp3",
+            "description": "Search for a song on Shazam",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "soundcloud",
+            "description": "Search SoundCloud for song results",
+            "syntax": "soundcloud <query>",
+            "example": "soundcloud Run Your Mouth",
+            "aliases": [
+                "sc"
+            ],
+            "module": "miscellaneous"
+        },
+        {
+            "name": "spotify",
+            "aliases": [
+                "sp"
+            ],
+            "description": "Search spotify for a song",
+            "syntax": "spotify <query>",
+            "example": "spotify Run Your Mouth",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "steam",
+            "aliases": [
+                "game"
+            ],
+            "description": "Search Steam for a game",
+            "syntax": "steam <game>",
+            "example": "steam CSGO",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "timezone",
+            "aliases": [
+                "tz"
+            ],
+            "description": "Manage and view your timezone",
+            "syntax": "timezone <subcommand> (args)",
+            "example": "timezone set Chicago",
+            "module": "miscellaneous",
+            "set": {
+                "name": "timezone set",
+                "description": "Set your timezone",
+                "syntax": "timezone set <location>",
+                "example": "timezone set Chicago",
+                "module": "miscellaneous"
+            },
+            "view": {
+                "name": "timezone view",
+                "description": "View your set timezone",
+                "syntax": "timezone view",
+                "example": "timezone view",
+                "module": "miscellaneous"
+            },
+            "reset": {
+                "name": "timezone reset",
+                "description": "Reset your timezone",
+                "syntax": "timezone reset",
+                "example": "timezone reset",
+                "module": "miscellaneous"
+            }
+        },
+        {
+            "name": "translate",
+            "aliases": [
+                "tr"
+            ],
+            "description": "Translates text",
+            "syntax": "translate <language> <text>",
+            "example": "translate french whats up",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "weather",
+            "aliases": [
+                "wthr"
+            ],
+            "description": "Manage and view your weather settings",
+            "syntax": "weather <subcommand> (args)",
+            "example": "weather set clearwater",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "weather set",
+            "description": "Set your default city for weather",
+            "syntax": "weather set <city>",
+            "example": "weather set clearwater",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "weather view",
+            "description": "View your set city for weather",
+            "syntax": "weather view",
+            "example": "weather view",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "weather reset",
+            "description": "Reset your default city for weather",
+            "syntax": "weather reset",
+            "example": "weather reset",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "wikipedia",
+            "aliases": [
+                "wiki"
+            ],
+            "description": "Search wiki for a query",
+            "syntax": "wikipedia <query>",
+            "example": "wikipedia earth",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "wolfram",
+            "aliases": [
+                "w"
+            ],
+            "description": "Get math answers",
+            "syntax": "wolfram <query>",
+            "example": "wolfram 2+2",
+            "module": "miscellaneous"
+        },
+        {
+            "name": "auditlogs",
+            "aliases": [
+                "audit",
+                "auditlog"
+            ],
+            "description": "View the audit log for the server",
+            "syntax": "auditlog",
+            "example": "auditlog",
+            "permissions": "VIEW_AUDIT_LOG",
+            "module": "moderation"
+        },
+        {
+            "name": "ban",
+            "aliases": [
+                "deport"
+            ],
+            "description": "Bans the mentioned user from the guild",
+            "syntax": "ban <member> (reason)",
+            "example": "ban @c2rter Bad Boy",
+            "permissions": "BAN_MEMBERS",
+            "module": "moderation"
+        },
+        {
+            "name": "banreason",
+            "aliases": [
+                "br"
+            ],
+            "description": "Check the reason why this member was banned",
+            "syntax": "banreason <user>",
+            "example": "banreason @c2rter",
+            "module": "moderation",
+            "permissions": "BAN_MEMBERS"
+        },
+        {
+            "name": "cleanup",
+            "aliases": [
+                "none"
+            ],
+            "description": "Deletes commands and messages from bots",
+            "syntax": "cleanup <amount>",
+            "example": "cleanup 10",
+            "permissions": "MANAGE_MESSAGES",
+            "module": "moderation"
+        },
+        {
+            "name": "emoji",
+            "aliases": [
+                "none"
+            ],
+            "description": "Manage server emojis",
+            "syntax": "emoji <subcommand> (args)",
+            "example": "emoji add :smile:",
+            "module": "moderation",
+            "permissions": "MANAGE_EMOJIS"
+        },
+        {
+            "name": "emoji add",
+            "description": "Add an emoji to the server",
+            "syntax": "emoji add <emoji> (name)",
+            "example": "emoji add :smile: smile",
+            "permissions": "MANAGE_EMOJIS",
+            "module": "moderation"
+        },
+        {
+            "name": "emoji remove",
+            "description": "Remove an emoji from the server",
+            "syntax": "emoji remove <emoji>",
+            "example": "emoji remove :smile:",
+            "permissions": "MANAGE_EMOJIS",
+            "module": "moderation"
+        },
+        {
+            "name": "emoji info",
+            "description": "Get information about an emoji",
+            "syntax": "emoji info <emoji>",
+            "example": "emoji info :smile:",
+            "permissions": "MANAGE_EMOJIS",
+            "module": "moderation"
+        },
+        {
+            "name": "emoji list",
+            "description": "List all server emojis",
+            "syntax": "emoji list",
+            "example": "emoji list",
+            "permissions": "MANAGE_EMOJIS",
+            "module": "moderation"
+        },
+        {
+            "name": "emoji addmany",
+            "description": "Add multiple emojis to the server",
+            "syntax": "emoji addmany <emojis>",
+            "example": "emoji addmany :smile: :laughing: :wink:",
+            "permissions": "MANAGE_EMOJIS",
+            "module": "moderation"
+        },
+        {
+            "name": "hackban",
+            "aliases": [
+                "hb"
+            ],
+            "description": "Ban a user outside of the server",
+            "syntax": "hackban <user_id> (reason)",
+            "example": "hackban 731935983389638739",
+            "module": "moderation"
+        },
+        {
+            "name": "hide",
+            "aliases": [
+                "hide"
+            ],
+            "description": "Hide a channel from everyone",
+            "syntax": "hide [channel]",
+            "example": "hide #general",
+            "permissions": "MANAGE_CHANNELS",
+            "module": "moderation"
+        },
+        {
+            "name": "hide all",
+            "description": "Hide all channels in a category",
+            "syntax": "hide all",
+            "example": "hide all",
+            "module": "moderation"
+        },
+        {
+            "name": "invites",
+            "aliases": [
+                "invites"
+            ],
+            "description": "View all of the invites in a server",
+            "syntax": "invites",
+            "example": "invites",
+            "permissions": "MANAGE_CHANNELS",
+            "module": "moderation"
+        },
+        {
+            "name": "invites delete",
+            "description": "Delete an invite",
+            "syntax": "invites delete <invite_code>",
+            "example": "invites delete 6hQnzfxQ",
+            "module": "moderation"
+        },
+        {
+            "name": "invites clear",
+            "description": "Clear all invites",
+            "syntax": "invites clear",
+            "example": "invites clear",
+            "module": "moderation"
+        },
+        {
+            "name": "invites create",
+            "description": "Create an invite",
+            "syntax": "invites create",
+            "example": "invites create",
+            "module": "moderation"
+        },
+        {
+            "name": "jail",
+            "aliases": [
+                "none"
+            ],
+            "description": "Jails the mentioned user from the guild",
+            "syntax": "jail (member)",
+            "example": "jail @c2rter",
+            "module": "moderation",
+            "permissions": "MANAGE_GUILD"
+        },
+        {
+            "name": "jail config",
+            "description": "Shows the configured jail settings",
+            "syntax": "jail config",
+            "example": "jail config",
+            "module": "moderation"
+        },
+        {
+            "name": "jail restore",
+            "description": "Restores and recreates the jail role and channel",
+            "syntax": "jail restore",
+            "example": "jail restore",
+            "module": "moderation"
+        },
+        {
+            "name": "lockdown",
+            "aliases": [
+                "lock"
+            ],
+            "description": "Locks a channel or all channels in a category",
+            "syntax": "lockdown <channel>",
+            "example": "lockdown #general",
+            "permissions": "MANAGE_CHANNELS",
+            "module": "moderation"
+        },
+        {
+            "name": "lockdown all",
+            "description": "Lock all channels in a category",
+            "syntax": "lockdown all",
+            "example": "lockdown all",
+            "module": "moderation"
+        },
+        {
+            "name": "modhistory",
+            "aliases": [
+                "modhist"
+            ],
+            "description": "View the moderation history for a user",
+            "syntax": "modhistory <user>",
+            "example": "modhistory @user",
+            "permissions": "VIEW_AUDIT_LOG",
+            "module": "moderation"
+        },
+        {
+            "name": "nuke",
+            "description": "Clone the channel and delete the original one",
+            "aliases": [
+                "none"
+            ],
+            "syntax": "nuke",
+            "example": "nuke",
+            "permissions": "MANAGE_CHANNELS",
+            "module": "moderation"
+        },
+        {
+            "name": "purge",
+            "aliases": [
+                "clear",
+                "c"
+            ],
+            "description": "Purge messages from a channel",
+            "syntax": "purge <messages>",
+            "example": "purge 100",
+            "permissions": "MANAGE_MESSAGES",
+            "module": "moderation"
+        },
+        {
+            "name": "purge bots",
+            "description": "Purge messages from bots",
+            "syntax": "purge bots <number>",
+            "example": "purge bots 10",
+            "permissions": "MANAGE_MESSAGES",
+            "module": "moderation"
+        },
+        {
+            "name": "purge images",
+            "description": "Purge messages with images",
+            "syntax": "purge images <number>",
+            "example": "purge images 10",
+            "permissions": "MANAGE_MESSAGES",
+            "module": "moderation"
+        },
+        {
+            "name": "purge embeds",
+            "description": "Purge messages with embeds",
+            "syntax": "purge embeds <number>",
+            "example": "purge embeds 10",
+            "permissions": "MANAGE_MESSAGES",
+            "module": "moderation"
+        },
+        {
+            "name": "purge reactions",
+            "description": "Remove reactions from messages",
+            "syntax": "purge reactions <number>",
+            "example": "purge reactions 10",
+            "permissions": "MANAGE_MESSAGES",
+            "module": "moderation"
+        },
+        {
+            "name": "purge emojis",
+            "description": "Purge messages with emojis",
+            "syntax": "purge emojis <number>",
+            "example": "purge emojis 10",
+            "permissions": "MANAGE_MESSAGES",
+            "module": "moderation"
+        },
+        {
+            "name": "seticon",
+            "description": "Set the icon of the server",
+            "syntax": "seticon <attachment>",
+            "example": "seticon wock.png",
+            "permissions": "MANAGE_GUILD",
+            "module": "moderation"
+        },
+        {
+            "name": "unhide",
+            "aliases": [
+                "unhide"
+            ],
+            "description": "Unhide a channel for everyone",
+            "syntax": "unhide [channel]",
+            "example": "unhide #general",
+            "permissions": "MANAGE_CHANNELS",
+            "module": "moderation"
+        },
+        {
+            "name": "unhide all",
+            "description": "Unhide all channels in a category",
+            "syntax": "unhide all",
+            "example": "unhide all",
+            "module": "moderation"
+        },
+        {
+            "name": "unlock",
+            "aliases": [
+                "unlock"
+            ],
+            "description": "Unlocks a channel or all channels in a category",
+            "syntax": "unlock <channel>",
+            "example": "unlock #general",
+            "permissions": "MANAGE_CHANNELS",
+            "module": "moderation"
+        },
+        {
+            "name": "unlock all",
+            "description": "Unlock all channels in a category",
+            "syntax": "unlock all",
+            "example": "unlock all",
+            "module": "moderation"
+        },
+        {
+            "name": "webhook",
+            "aliases": [
+                "hook",
+                "wh"
+            ],
+            "description": "Manage webhooks in the guild",
+            "syntax": "webhook <subcommand> <args>",
+            "example": "webhook delete boss",
+            "permissions": "MANAGE_GUILD",
+            "module": "moderation"
+        },
+        {
+            "name": "webhook create",
+            "description": "Create a webhook in the specified channel",
+            "syntax": "webhook create #channel <name> (attachment)",
+            "example": "webhook create #rules boss wock.png",
+            "permissions": "MANAGE_GUILD",
+            "module": "moderation"
+        },
+        {
+            "name": "webhook delete",
+            "description": "Delete an existing webhook by its name",
+            "syntax": "webhook delete <name>",
+            "example": "webhook delete boss",
+            "permissions": "MANAGE_GUILD",
+            "module": "moderation"
+        },
+        {
+            "name": "webhook send",
+            "description": "Send a message through a webhook",
+            "syntax": "webhook send <webhook_id> <message>",
+            "example": "webhook send 123456789012345678 Hello, world!",
+            "permissions": "MANAGE_GUILD",
+            "module": "moderation"
+        },
+        {
+            "name": "webhook list",
+            "description": "View all webhooks in the guild",
+            "syntax": "webhook list",
+            "example": "webhook list",
+            "permissions": "MANAGE_GUILD",
+            "module": "moderation"
+        },
+        {
+            "name": "webhook edit",
+            "description": "Edit a webhook's name or avatar",
+            "syntax": "webhook edit <avatar|name> <new_avatar|name>",
+            "example": "webhook edit avatar <attachment>",
+            "permissions": "MANAGE_GUILD",
+            "module": "moderation"
+        },
+        {
+            "name": "cashapp",
+            "aliases": [
+                "ca"
+            ],
+            "description": "Manage and view your CashApp username",
+            "syntax": "cashapp (username)",
+            "example": "cashapp crrter",
+            "module": "socials"
+        },
+        {
+            "name": "cashapp set",
+            "description": "Set your CashApp username",
+            "syntax": "cashapp set <username>",
+            "example": "cashapp set crrter",
+            "module": "socials"
+        },
+        {
+            "name": "cashapp reset",
+            "description": "Reset your CashApp username",
+            "syntax": "cashapp reset",
+            "example": "cashapp reset",
+            "module": "socials"
+        },
+        {
+            "name": "cashapp view",
+            "description": "View your CashApp username",
+            "syntax": "cashapp view",
+            "example": "cashapp view",
+            "module": "socials"
+        },
+        {
+            "name": "github",
+            "description": "Manage and view your GitHub username",
+            "syntax": "github (username)",
+            "example": "github enlarged",
+            "aliases": [
+                "git",
+                "gh"
+            ],
+            "module": "socials"
+        },
+        {
+            "name": "github set",
+            "description": "Set your GitHub username",
+            "syntax": "github set <username>",
+            "example": "github set enlarged",
+            "module": "socials"
+        },
+        {
+            "name": "github reset",
+            "description": "Reset your GitHub username",
+            "syntax": "github reset",
+            "example": "github reset",
+            "module": "socials"
+        },
+        {
+            "name": "github view",
+            "description": "View your GitHub username",
+            "syntax": "github view",
+            "example": "github view",
+            "module": "socials"
+        },
+        {
+            "name": "socials",
+            "aliases": [
+                "social"
+            ],
+            "description": "View your or another member's socials",
+            "syntax": "socials (member)",
+            "example": "socials @c2rter",
+            "module": "socials"
+        },
+        {
+            "name": "socials clear",
+            "description": "Clear all of your socials",
+            "syntax": "socials clear",
+            "example": "socials clear",
+            "module": "socials"
+        },
+        {
+            "name": "tiktok",
+            "aliases": [
+                "tt"
+            ],
+            "description": "Gets profile information on the given TikTok user",
+            "syntax": "tiktok <username>",
+            "example": "tiktok kyliejenner",
+            "module": "socials"
+        },
+        {
+            "name": "tiktok set",
+            "description": "Set your TikTok username",
+            "syntax": "tiktok set <username>",
+            "example": "tiktok set kyliejenner",
+            "module": "socials"
+        },
+        {
+            "name": "tiktok reset",
+            "description": "Reset your TikTok username",
+            "syntax": "tiktok reset",
+            "example": "tiktok reset",
+            "module": "socials"
+        },
+        {
+            "name": "tiktok view",
+            "description": "View your TikTok username",
+            "syntax": "tiktok view",
+            "example": "tiktok view",
+            "module": "socials"
+        },
+        {
+            "name": "twitter",
+            "aliases": [
+                "x"
+            ],
+            "description": "View a twitter profile",
+            "syntax": "twitter (username)",
+            "example": "twitter spacex",
+            "module": "socials"
+        },
+        {
+            "name": "twitter set",
+            "description": "Set your Twitter username",
+            "syntax": "twitter set <username>",
+            "example": "twitter set spacex",
+            "module": "socials"
+        },
+        {
+            "name": "twitter reset",
+            "description": "Reset your Twitter username",
+            "syntax": "twitter reset",
+            "example": "twitter reset",
+            "module": "socials"
+        },
+        {
+            "name": "twitter view",
+            "description": "View your Twitter username",
+            "syntax": "twitter view",
+            "example": "twitter view",
+            "module": "socials"
+        },
+        {
+            "name": "xbox",
+            "aliases": [
+                "xb",
+                "xbl"
+            ],
+            "description": "Manage and view your Xbox gamertag",
+            "syntax": "xbox <username>",
+            "example": "xbox c9ce",
+            "module": "socials"
+        },
+        {
+            "name": "xbox set",
+            "description": "Set your Xbox gamertag",
+            "syntax": "xbox set <gamertag>",
+            "example": "xbox set c9ce",
+            "module": "socials"
+        },
+        {
+            "name": "xbox reset",
+            "description": "Reset your Xbox gamertag",
+            "syntax": "xbox reset",
+            "example": "xbox reset",
+            "module": "socials"
+        },
+        {
+            "name": "xbox view",
+            "description": "View your Xbox gamertag",
+            "syntax": "xbox view",
+            "example": "xbox view",
+            "module": "socials"
+        },
+        {
+            "name": "youtube",
+            "aliases": [
+                "yt"
+            ],
+            "description": "Search YouTube for video results",
+            "syntax": "youtube <query>",
+            "example": "youtube Cute kittens",
+            "module": "socials"
+        }
+    ]
+}
